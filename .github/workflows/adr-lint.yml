@@ -1,0 +1,16 @@
+name: ADR lint
+
+# Echoue si un ADR ne respecte pas le template du TD2.
+on:
+  push:
+    paths: ["doc/adr/**", "scripts/check_adr.sh"]
+  pull_request:
+    paths: ["doc/adr/**", "scripts/check_adr.sh"]
+
+jobs:
+  check-adr-template:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Valider le template de tous les ADR
+        run: ./scripts/check_adr.sh

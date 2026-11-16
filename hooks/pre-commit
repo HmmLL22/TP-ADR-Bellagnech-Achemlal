@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Hook pre-commit : valide le format des ADR ajoutes/modifies.
+# Installation : ./scripts/install_hooks.sh
+files=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^doc/adr/[0-9]+.*\.md$')
+[ -z "$files" ] && exit 0
+# shellcheck disable=SC2086
+exec ./scripts/check_adr.sh $files
