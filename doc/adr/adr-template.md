@@ -7,7 +7,7 @@ En discussion
 Description du probleme ou du besoin a adresser.
 
 ## Decision
-**Decision retenue : <phrase courte et exacte, reprise telle quelle dans la vue ArchiMate>.**
+**Décision retenue : <phrase courte et exacte, reprise telle quelle dans la vue ArchiMate>.**
 
 Detail de la solution choisie.
 
